@@ -31,6 +31,7 @@ Next:
 
 Begin Body_Upper segmentation and implement the same join standard (Ø5.0 sockets, Ø4.625 pegs, 45 mm length, 25 mm socket depth, 1 mm chamfers). Defer peg-fit coupon until printer access is available; coupon remains required before committing to full production prints.
 
+Status: Validated in production
 
 __________________________________________________________________________________________
 
@@ -98,6 +99,8 @@ Upper body pin/connector coupon: validate connector diameter/tolerance, depth/en
 
 Adjust tolerances/fit based on coupon results, then lock final connector parameters and export production STLs for full upper/lower printing when fabrication access is available.
 
+
+Status: Superseded
 
 __________________________________________________________________________________________
 
@@ -221,3 +224,135 @@ Body_Lower is now fully printed and physically validated. The Fusion-modeled dow
 Next:
 
 Complete full dry-fit assembly of all Body_Lower sections with dowels installed, then proceed to permanent assembly and seam finishing (bonding + filler). In parallel, begin planning composite workflow validation using a smaller training mold section before committing to full clamshell mold fabrication.
+
+
+Status: Validated in production
+
+__________________________________________________________________________________________
+
+
+
+Entry 4: Body_Upper alignment system redesign (Fusion tab keys) + coupon preparation
+
+Date:
+
+2026-03-07
+
+Change made:
+
+Replaced the previously planned slicer-style connector alignment for Body_Upper with a Fusion-modeled tab-and-pocket alignment system. Implemented standardized floating rectangular alignment keys across all Body_Upper station seams. Two tab sizes were defined to match the two pocket geometries created during segmentation.
+
+Why:
+
+The slicer-connector strategy originally chosen for Body_Upper proved less controllable than expected when working with already-segmented geometry. Modeling the alignment features directly in Fusion allows:
+
+deterministic geometry control
+
+consistent engagement depth
+
+repeatable tolerances across seams
+
+independence from slicer-specific connector tooling
+
+Rectangular floating tabs also simplify assembly in areas where three sections meet at a joint and avoid over-constraining the seam compared to dowel-style joins.
+
+How (settings/params):
+
+Body_Upper join pockets created during segmentation:
+
+Type A pockets
+
+Opening face:
+30 × 5 mm
+
+Pocket depth:
+24 mm
+
+Used at seams between:
+
+Section 01–02
+
+Section 02–03_L / 03_C / 03_R
+
+Section 03–04 center joints
+
+Alignment key used:
+
+TAB30
+
+26 × 4 × 20 mm
+0.5 mm chamfer on insertion edges
+
+Clearances:
+
+width: 2 mm per side
+
+thickness: 0.5 mm per side
+
+depth: ~2 mm per side when centered
+
+Type B pockets
+
+Opening face:
+20 × 5 mm
+
+Pocket depth:
+24 mm
+
+Used at seams between:
+
+Section 04_L / 04_C / 04_R
+
+Section 05_L / 05_R
+
+Alignment key used:
+
+TAB20
+
+16 × 4 × 20 mm
+0.5 mm chamfer on insertion edges
+
+Clearances:
+
+width: 2 mm per side
+
+thickness: 0.5 mm per side
+
+depth: ~2 mm per side when centered
+
+Design characteristics
+
+Tabs act as floating alignment keys rather than structural tongues:
+
+prevent seam step
+
+prevent yaw/rotation during assembly
+
+maintain repeatable registration
+
+Glue and seam faces carry structural load; tabs provide positional indexing only.
+
+All tabs standardized to 20 mm engagement depth for consistent assembly behavior.
+
+Result:
+
+Body_Upper alignment strategy is now fully defined using Fusion-modeled tab keys rather than slicer connectors. All seams use one of two standardized alignment keys (TAB30 or TAB20), simplifying manufacturing and assembly.
+
+CAD alignment system for the upper body is now complete.
+
+Next:
+
+Print fit-test coupons representing Body_Upper seam geometry to validate:
+
+Tab insertion force
+
+Printed tolerance behavior
+
+Seam closure when tabs are installed
+
+Rotational stability during dry-fit
+
+Adjust tab dimensions if necessary before committing to full Body_Upper production prints.
+
+
+Status: Implemented, not yet validated
