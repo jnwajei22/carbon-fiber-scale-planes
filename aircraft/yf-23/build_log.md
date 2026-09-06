@@ -356,3 +356,329 @@ Adjust tab dimensions if necessary before committing to full Body_Upper producti
 
 
 Status: Implemented, not yet validated
+
+Entry 5: Body_Upper production printing completed + TAB30 tolerance revision + pre-assembly validation
+
+Date:
+
+2026-09-05
+
+Change made:
+
+Completed production printing of all 10 structural Body_Upper sections and performed full dry-fit and pre-assembly inspection of the upper and lower tooling masters.
+
+The Fusion-modeled tab-and-pocket alignment system introduced in Entry 4 was physically evaluated using the completed Body_Upper sections. Physical fit testing identified excessive lateral clearance in the original TAB30 alignment key. TAB30 was subsequently revised from 26 mm nominal width to 29 mm nominal width while retaining the existing 4 mm thickness, 20 mm length, and 0.5 mm insertion chamfer.
+
+A single TAB30 Rev B was printed and physically tested before committing to the replacement production batch. The revised geometry substantially reduced lateral movement while retaining sufficient clearance for manual insertion and removal.
+
+Production printing of the canopy remains outstanding. Its current slicer estimate is documented below and will be replaced/supplemented with actual print telemetry after fabrication.
+
+Why:
+
+Body_Upper represented the second major additive-manufacturing phase of the tooling-master fabrication process. Unlike Body_Lower, which uses cylindrical dowels, Body_Upper uses floating rectangular keys to provide positional registration across the segmented geometry.
+
+The original TAB30 design incorporated 2 mm of lateral clearance per side within the nominal 30 mm-wide Type A pocket. Physical testing showed that this clearance was excessive for the intended registration function. Although the tab engaged the pocket without interference, the resulting lateral movement permitted excessive positional freedom between adjoining sections.
+
+Increasing TAB30 nominal width from 26 mm to 29 mm reduced the designed lateral clearance from 4 mm total to approximately 1 mm total, or 0.5 mm per side.
+
+The revised TAB30 was printed individually and test-fitted before producing the replacement batch, limiting additional material and fabrication time in the event that further tolerance adjustment was required.
+
+Completion of the structural upper-body printing and alignment validation establishes a formal phase boundary between additive manufacturing and plug assembly/surface preparation.
+
+How (settings/params):
+
+Printer:
+
+Bambu Lab A1
+
+0.4 mm nozzle
+
+Textured PEI build plate
+
+Material:
+
+Generic PLA
+
+Gray / silver
+
+1.75 mm filament
+
+Layer settings:
+
+Layer height: 0.16 mm
+
+Initial layer height: 0.20 mm
+
+Infill:
+
+12% gyroid
+
+Adhesion:
+
+Outer brim
+
+5 mm width
+
+Supports:
+
+Enabled as required for Body_Upper production geometry
+
+
+Body_Upper structural production:
+
+BODY_UPPER_01
+
+Duration: 2h 41m (slicer estimate)
+
+Material: 75.45 g (slicer estimate)
+
+
+BODY_UPPER_02
+
+Duration: 7h 04m (slicer estimate)
+
+Material: 210.45 g (slicer estimate)
+
+
+BODY_UPPER_03_L
+
+Duration: 5h 02m
+
+Material: 134.98 g
+
+
+BODY_UPPER_03_C
+
+Duration: 9h 56m
+
+Material: 290.96 g
+
+
+BODY_UPPER_03_R
+
+Duration: 5h 01m
+
+Material: 136.46 g
+
+
+BODY_UPPER_04_L
+
+Duration: 3h 34m
+
+Material: 91.09 g
+
+
+BODY_UPPER_04_C
+
+Duration: 7h 07m
+
+Material: 241.31 g
+
+
+BODY_UPPER_04_R
+
+Duration: 3h 21m
+
+Material: 86.71 g
+
+
+BODY_UPPER_05_L
+
+Duration: 4h 21m
+
+Material: 116.01 g
+
+
+BODY_UPPER_05_R
+
+Duration: 4h 20m
+
+Material: 116.04 g
+
+
+Total Body_Upper structural print time:
+
+52h 27m
+
+
+Total Body_Upper structural material:
+
+1,499.46 g PLA
+
+
+Canopy:
+
+Production print pending
+
+Current slicer estimate:
+
+Duration: 2h 55m
+
+Material: 42.98 g PLA
+
+Estimated Body_Upper total including canopy:
+
+55h 22m
+
+1,542.44 g PLA
+
+
+Alignment hardware:
+
+Original TAB30 / TAB20 production batch:
+
+7 × TAB30 Rev A
+
+5 × TAB20
+
+Duration: 42m
+
+Material: 14.6 g PLA
+
+
+TAB30 Rev A:
+
+26 × 4 × 20 mm
+
+0.5 mm insertion chamfer
+
+Nominal Type A pocket:
+
+30 × 5 mm
+
+Physical observation:
+
+Excessive lateral movement during fit testing. The original 26 mm width provided approximately 4 mm total nominal lateral clearance and did not provide sufficiently precise registration.
+
+
+TAB30 Rev B:
+
+29 × 4 × 20 mm
+
+0.5 mm insertion chamfer
+
+Nominal Type A pocket:
+
+30 × 5 mm
+
+Nominal lateral clearance:
+
+1.0 mm total
+
+Approximately 0.5 mm per side
+
+
+TAB30 Rev B validation print:
+
+Quantity: 1
+
+Duration: 10m
+
+Material: 1.69 g PLA
+
+Physical observation:
+
+Substantially reduced lateral movement compared with TAB30 Rev A. Minor clearance remained, allowing insertion and removal without excessive force. No major lateral slippage was observed.
+
+Fit accepted for production use.
+
+
+TAB30 Rev B production batch:
+
+Quantity: 5
+
+Duration: 23m
+
+Material: 8.17 g PLA
+
+
+TAB20:
+
+16 × 4 × 20 mm
+
+0.5 mm insertion chamfer
+
+Quantity produced: 5
+
+Geometry unchanged from Entry 4.
+
+
+Alignment-development / hardware printing documented during this phase:
+
+Total print time: 1h 15m
+
+Total material: 24.46 g PLA
+
+This includes the original mixed TAB30 Rev A / TAB20 batch, one TAB30 Rev B validation print, and the five-piece TAB30 Rev B replacement production batch.
+
+
+Inspection / validation:
+
+All 10 structural Body_Upper sections were successfully fabricated.
+
+The complete Body_Upper assembly was dry-fitted to evaluate overall geometry, seam continuity, and registration before permanent bonding.
+
+Body_Lower was also dry-fitted and retained as an independent tooling master. Body_Upper and Body_Lower will not be permanently bonded to one another.
+
+Individual inventory photographs were taken of the printed upper- and lower-body components.
+
+Lower-body alignment fit-test coupons were retained and photographed as physical validation artifacts.
+
+Inspection of the lower-body blind dowel sockets identified residual support/printed material in the bottoms of some sockets. The sockets are nominally 25.0 mm deep while the dowel design requires 22.5 mm engagement per side, providing approximately 2.5 mm of axial relief.
+
+Socket cleanup will therefore target restoration of the required usable engagement depth rather than unnecessary removal of all material at the absolute bottom of each blind socket.
+
+
+Result:
+
+Production printing of all primary Body_Upper structural sections is complete.
+
+The Body_Upper floating-tab alignment concept was physically demonstrated using the completed production geometry. Testing identified excessive lateral clearance in the original 26 mm TAB30 design.
+
+TAB30 was revised to 29 mm nominal width. A single Rev B tab was fabricated and physically validated before the replacement production batch was printed. The revised geometry provides acceptable registration with substantially reduced lateral movement while maintaining sufficient assembly clearance.
+
+Body_Upper structural fabrication required approximately 52h 27m of printing and 1.50 kg of PLA. Including the currently estimated canopy print, the complete upper tooling master is expected to require approximately 55h 22m and 1.54 kg of PLA, excluding alignment hardware.
+
+For comparison, Body_Lower production required 27h 54m and 728.88 g PLA.
+
+Based on the currently documented values, the complete upper and lower tooling-master geometry, including the estimated canopy but excluding alignment hardware and earlier lower-body validation coupons/dowels, represents approximately:
+
+83h 16m of additive manufacturing
+
+2,271.32 g PLA
+
+The project has now progressed from primary additive manufacturing into pre-assembly preparation. No permanent structural bonding, exterior fairing, or mold-surface finishing has begun.
+
+
+Next:
+
+Begin plug assembly and surface preparation.
+
+Clean lower-body dowel sockets only as required to restore the designed 22.5 mm minimum usable engagement depth.
+
+Remove brim remnants, support residue, blobs, and other printing artifacts from mating surfaces.
+
+Use a rigid sanding block to flatten mating faces as required while avoiding rounding or altering exterior tooling geometry.
+
+Repeatedly dry-fit adjoining sections during surface preparation to verify seam closure and alignment.
+
+Perform a final complete dry-fit after mating-face preparation.
+
+Permanently bond Body_Upper sections into one rigid upper tooling master and Body_Lower sections into one rigid lower tooling master.
+
+Reinforce bonded joints from non-tooling/interior surfaces where accessible.
+
+Begin exterior seam filling, fairing, filler-primer application, and progressive sanding in preparation for mold fabrication.
+
+Record actual canopy production telemetry after printing and update the fabrication totals accordingly.
+
+
+Status:
+
+Body_Upper structural production printing complete
+
+TAB30 Rev B physically validated and accepted
+
+Primary additive-manufacturing phase complete pending canopy
+
+Ready for plug assembly and surface preparation
